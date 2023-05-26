@@ -1,0 +1,11 @@
+::ng-deep {
+  .p-menubar {
+    font-size: 1.2rem;
+    font-weight: bold;
+    p-button {
+      &.button-basket {
+        margin-inline: 16px;
+      }
+    }
+  }
+}

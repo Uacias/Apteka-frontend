@@ -16,6 +16,7 @@ import { HealthAndWellnessComponent } from './pages/store/subpages/health-and-we
 import { BeautyComponent } from './pages/store/subpages/beauty/beauty.component';
 import { SupplementsComponent } from './pages/store/subpages/supplements/supplements.component';
 import { DietAndNutritionComponent } from './pages/store/subpages/diet-and-nutrition/diet-and-nutrition.component';
+import { StoreComponent } from './pages/store/store.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -33,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: 'store',
-    component: AboutComponent,
+    component: StoreComponent,
     children: [
       { path: 'pharmacy', component: PharmacyComponent },
       { path: 'health-and-wellness', component: HealthAndWellnessComponent },

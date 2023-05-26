@@ -44,10 +44,6 @@ export class NavComponent {
           { label: 'Privacy Policy', routerLink: 'about/privacy-policy' },
         ],
       },
-      {
-        label: 'Contact',
-        routerLink: 'contact',
-      },
     ];
   }
 }

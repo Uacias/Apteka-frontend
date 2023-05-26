@@ -13,6 +13,7 @@ export class NavComponent {
     this.items = [
       {
         label: 'Home',
+        routerLink: 'home',
       },
       {
         label: 'Store',
@@ -29,9 +30,11 @@ export class NavComponent {
 
       {
         label: 'About',
+        routerLink: 'about',
       },
       {
         label: 'Contact',
+        routerLink: 'contact',
       },
     ];
   }

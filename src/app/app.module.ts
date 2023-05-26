@@ -11,8 +11,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 @NgModule({
-  declarations: [AppComponent, NavComponent, HomeComponent, NotFoundComponent],
+  declarations: [AppComponent, NavComponent, HomeComponent, NotFoundComponent, AboutComponent, ContactComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

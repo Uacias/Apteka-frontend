@@ -17,12 +17,14 @@ import { BeautyComponent } from './pages/store/subpages/beauty/beauty.component'
 import { SupplementsComponent } from './pages/store/subpages/supplements/supplements.component';
 import { DietAndNutritionComponent } from './pages/store/subpages/diet-and-nutrition/diet-and-nutrition.component';
 import { StoreComponent } from './pages/store/store.component';
+import { RedirectedPagesGuard } from './shared/guards/redirected-pages.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
 
   {
     path: 'about',
+    canActivate: [RedirectedPagesGuard],
     component: AboutComponent,
     children: [
       { path: 'location', component: LocationComponent },
@@ -34,6 +36,7 @@ const routes: Routes = [
   },
   {
     path: 'store',
+    canActivate: [RedirectedPagesGuard],
     component: StoreComponent,
     children: [
       { path: 'pharmacy', component: PharmacyComponent },

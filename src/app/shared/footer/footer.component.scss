@@ -1,0 +1,40 @@
+div {
+  &.flex-column {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      &.flex-row {
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-block: 32px;
+
+        i {
+          font-size: 3rem;
+
+          &:hover {
+            cursor: pointer;
+            color: rgb(20, 184, 166);
+          }
+        }
+      }
+
+      &.actions {
+        width: 100%;
+        margin-block: 0;
+        justify-content: space-between;
+        @media (max-width: 840px) {
+          div {
+            &.container-links {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}

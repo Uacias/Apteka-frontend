@@ -26,6 +26,7 @@ import { VitaminsComponent } from './pages/store/subpages/vitamins/vitamins.comp
 import { DietAndNutritionComponent } from './pages/store/subpages/diet-and-nutrition/diet-and-nutrition.component';
 import { TeaAndCoffeeComponent } from './pages/store/subpages/tea-and-coffee/tea-and-coffee.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
+import { FooterComponent } from './shared/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
     DietAndNutritionComponent,
     TeaAndCoffeeComponent,
     CarouselComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

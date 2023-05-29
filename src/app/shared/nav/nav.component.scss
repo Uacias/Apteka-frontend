@@ -10,9 +10,7 @@
     border-radius: 0;
 
     .p-button {
-      &.button-basket {
-        margin-inline: 16px;
-      }
+      margin-inline: 8px;
     }
   }
 }
@@ -21,10 +19,15 @@
   ::ng-deep {
     .p-menubar {
       height: 56px;
-      .p-button {
-        &.button-basket {
-          margin-inline: 8px;
-        }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  ::ng-deep {
+    .p-menubar {
+      input {
+        width: 160px;
       }
     }
   }

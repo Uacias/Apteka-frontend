@@ -1,10 +1,30 @@
 ::ng-deep {
   .p-menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     font-size: 1.2rem;
     font-weight: bold;
-    p-button {
+    border-radius: 0;
+
+    .p-button {
       &.button-basket {
         margin-inline: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ::ng-deep {
+    .p-menubar {
+      height: 56px;
+      .p-button {
+        &.button-basket {
+          margin-inline: 8px;
+        }
       }
     }
   }

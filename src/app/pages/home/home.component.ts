@@ -1,7 +1,6 @@
-import { ProductsService } from '../../shared/product/products.service';
 import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs';
 import { ISlide } from 'src/app/shared/carousel/slide';
+import { ProductsService } from 'src/app/shared/product/products.service';
 
 @Component({
   selector: 'app-home',
@@ -11,18 +10,11 @@ import { ISlide } from 'src/app/shared/carousel/slide';
 export class HomeComponent implements OnInit {
   carouselSlides!: ISlide[];
 
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(private readonly productService: ProductsService) {}
 
   ngOnInit(): void {
     this.setupCarouselSlides();
-    this.productsService
-      .getAllProducts()
-      .pipe(
-        tap((e) => {
-          console.log(e);
-        })
-      )
-      .subscribe();
+    this.productService.getAllProducts().subscribe();
   }
 
   setupCarouselSlides() {

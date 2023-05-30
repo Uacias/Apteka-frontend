@@ -12,6 +12,17 @@
         />
         <p class="m-0">{{ product.description }}</p>
         <p class="m-0">{{ product.price | currency }}</p>
+        <div class="wrapper-amount">
+          <p-button
+            icon="pi pi-minus"
+            styleClass="p-button-rounded  "
+          ></p-button>
+          <span class="amount">1</span>
+          <p-button icon="pi pi-plus" styleClass="p-button-rounded "></p-button>
+        </div>
+        <div class="wrapper-button">
+          <p-button label="Add"></p-button>
+        </div>
       </p-card>
     </div>
   </div>

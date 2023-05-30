@@ -1,0 +1,18 @@
+<div class="wrapper-bestsellers">
+  <h3 class="section-title">Bestsellers</h3>
+  <div class="wrapper-cards">
+    <div *ngFor="let product of this.bestSellers">
+      <p-card [header]="product.name" class="card-bestseller">
+        <img
+          [src]="
+            '../../../../assets/img/products/' + product.pictureId + '.jpg'
+          "
+          [alt]="product.name"
+          class="product-image"
+        />
+        <p class="m-0">{{ product.description }}</p>
+        <p class="m-0">{{ product.price | currency }}</p>
+      </p-card>
+    </div>
+  </div>
+</div>

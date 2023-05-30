@@ -3,9 +3,15 @@ export interface IProduct {
   name: string;
   price: number;
   description: string;
-  type: TypProduktu;
+  type: productType;
   ingredients: string;
   pictureId: string;
 }
 
-export type TypProduktu = 'LEK' | 'WITAMINA' | 'SUPLEMENT_DIETETYCZNY';
+export enum productType {
+  HEALTHWELLNESS = 'Zdrowie i uroda',
+  VITAMINS = 'Witaminy',
+  SUPPLEMENTS = 'Suplementy dietetyczne',
+  BEAUTY = 'Pielęgnacja ciała',
+  PHARMACY = 'Apteka',
+}

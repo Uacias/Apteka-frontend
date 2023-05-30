@@ -7,6 +7,9 @@ import { MenubarModule } from 'primeng/menubar';
 import { NavComponent } from './shared/nav/nav.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { RatingModule } from 'primeng/rating';
+import { AvatarModule } from 'primeng/avatar';
 import { HomeComponent } from './pages/home/home.component';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +31,8 @@ import { DietAndNutritionComponent } from './pages/store/subpages/diet-and-nutri
 import { TeaAndCoffeeComponent } from './pages/store/subpages/tea-and-coffee/tea-and-coffee.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { BestsellersComponent } from './pages/home/bestsellers/bestsellers.component';
+import { UserOpinionsComponent } from './pages/home/user-opinions/user-opinions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +55,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     TeaAndCoffeeComponent,
     CarouselComponent,
     FooterComponent,
+    BestsellersComponent,
+    UserOpinionsComponent,
   ],
   imports: [
     HttpClientModule,
@@ -61,6 +68,9 @@ import { FooterComponent } from './shared/footer/footer.component';
     BrowserAnimationsModule,
     NgbModule,
     NgbCarouselModule,
+    CardModule,
+    AvatarModule,
+    RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

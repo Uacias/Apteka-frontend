@@ -1,3 +1,4 @@
+$screen-tablet: 768px;
 div {
   h3 {
     &.section-title {
@@ -19,7 +20,7 @@ div {
       &.wrapper-cards {
         display: flex;
         div {
-          margin-inline: 8px;
+          margin-inline: 16px;
           p-card {
             &.card-bestseller {
               img {
@@ -29,6 +30,27 @@ div {
                 }
               }
             }
+            div {
+              &.wrapper-amount {
+                margin-top: 24px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span {
+                  &.amount {
+                    font-weight: bold;
+                    font-size: 24px;
+                  }
+                }
+              }
+            }
+            div {
+              &.wrapper-button {
+                margin-top: 16px;
+                display: flex;
+                justify-content: center;
+              }
+            }
           }
         }
       }
@@ -36,6 +58,18 @@ div {
   }
 }
 
-p-card {
-  margin-inline: 100px;
+@media (max-width: $screen-tablet) {
+  div {
+    &.wrapper-bestsellers {
+      div {
+        &.wrapper-cards {
+          flex-direction: column;
+          align-items: center;
+          div {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,4 +1,4 @@
-<div class="wrapper-bestsellers">
+<div class="wrapper-bestsellers" *ngIf="this.bestSellers.length">
   <h3 class="section-title">Bestsellers</h3>
   <div class="wrapper-cards">
     <div *ngFor="let product of this.bestSellers">
@@ -12,6 +12,17 @@
         />
         <p class="m-0">{{ product.description }}</p>
         <p class="m-0">{{ product.price | currency }}</p>
+        <div class="wrapper-amount">
+          <p-button
+            icon="pi pi-minus"
+            styleClass="p-button-rounded  "
+          ></p-button>
+          <span class="amount">1</span>
+          <p-button icon="pi pi-plus" styleClass="p-button-rounded "></p-button>
+        </div>
+        <div class="wrapper-button">
+          <p-button label="Add"></p-button>
+        </div>
       </p-card>
     </div>
   </div>

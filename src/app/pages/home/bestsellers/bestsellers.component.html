@@ -1,4 +1,4 @@
-<div class="wrapper-bestsellers">
+<div class="wrapper-bestsellers" *ngIf="this.bestSellers.length">
   <h3 class="section-title">Bestsellers</h3>
   <div class="wrapper-cards">
     <div *ngFor="let product of this.bestSellers">

@@ -27,8 +27,6 @@ import { HealthAndWellnessComponent } from './pages/store/subpages/health-and-we
 import { BeautyComponent } from './pages/store/subpages/beauty/beauty.component';
 import { SupplementsComponent } from './pages/store/subpages/supplements/supplements.component';
 import { VitaminsComponent } from './pages/store/subpages/vitamins/vitamins.component';
-import { DietAndNutritionComponent } from './pages/store/subpages/diet-and-nutrition/diet-and-nutrition.component';
-import { TeaAndCoffeeComponent } from './pages/store/subpages/tea-and-coffee/tea-and-coffee.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BestsellersComponent } from './pages/home/bestsellers/bestsellers.component';
@@ -51,8 +49,6 @@ import { UserOpinionsComponent } from './pages/home/user-opinions/user-opinions.
     BeautyComponent,
     SupplementsComponent,
     VitaminsComponent,
-    DietAndNutritionComponent,
-    TeaAndCoffeeComponent,
     CarouselComponent,
     FooterComponent,
     BestsellersComponent,

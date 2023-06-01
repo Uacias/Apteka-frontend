@@ -1,0 +1,23 @@
+p-card.card-bestseller {
+  img.product-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  div.wrapper-amount {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    span.amount {
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+
+  div.wrapper-button {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+}

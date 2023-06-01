@@ -1,1 +1,8 @@
-<p>health-and-wellness works!</p>
+<div>
+  <h2 class="header">Health & Wellness Products</h2>
+  <div class="product-grid">
+    <ng-container *ngFor="let product of products">
+      <app-product [product]="product"></app-product>
+    </ng-container>
+  </div>
+</div>

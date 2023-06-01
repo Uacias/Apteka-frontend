@@ -31,6 +31,7 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BestsellersComponent } from './pages/home/bestsellers/bestsellers.component';
 import { UserOpinionsComponent } from './pages/home/user-opinions/user-opinions.component';
+import { ProductComponent } from './shared/product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { UserOpinionsComponent } from './pages/home/user-opinions/user-opinions.
     FooterComponent,
     BestsellersComponent,
     UserOpinionsComponent,
+    ProductComponent,
   ],
   imports: [
     HttpClientModule,

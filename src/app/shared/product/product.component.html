@@ -1,10 +1,12 @@
 <p-card [header]="product.name" class="card-bestseller">
-  <img
-    [src]="'../../../../assets/img/products/' + product.pictureId + '.jpg'"
-    [alt]="product.name"
-    class="product-image"
-  />
-  <p class="m-0">{{ product.description }}</p>
+  <div class="image-container">
+    <img
+      [src]="'../../../../assets/img/products/' + product.pictureId + '.jpg'"
+      [alt]="product.name"
+      class="product-image"
+    />
+  </div>
+
   <p class="m-0">{{ product.price | currency }}</p>
   <div class="wrapper-amount">
     <p-button

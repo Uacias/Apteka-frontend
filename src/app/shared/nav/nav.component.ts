@@ -34,14 +34,9 @@ export class NavComponent {
       {
         label: 'About Us',
         items: [
-          { label: 'Location & Hours', routerLink: 'about/location' },
+
           { label: 'Contact Us', routerLink: 'about/contact' },
           { label: 'Our story', routerLink: 'about/our-story' },
-          {
-            label: 'Terms & Conditions',
-            routerLink: 'about/terms-and-conditions',
-          },
-          { label: 'Privacy Policy', routerLink: 'about/privacy-policy' },
         ],
       },
     ];

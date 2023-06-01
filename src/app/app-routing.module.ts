@@ -27,11 +27,8 @@ const routes: Routes = [
     canActivate: [RedirectedPagesGuard],
     component: AboutComponent,
     children: [
-      { path: 'location', component: LocationComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'our-story', component: OurStoryComponent },
-      { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
-      { path: 'privacy-policy', component: PrivacyPolicyComponent },
     ],
   },
   {

@@ -33,6 +33,9 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BestsellersComponent } from './pages/home/bestsellers/bestsellers.component';
 import { UserOpinionsComponent } from './pages/home/user-opinions/user-opinions.component';
+import {TabViewModule} from "primeng/tabview";
+import {DividerModule} from "primeng/divider";
+import {TableModule} from "primeng/table";
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,6 +74,9 @@ import { UserOpinionsComponent } from './pages/home/user-opinions/user-opinions.
     CardModule,
     AvatarModule,
     RatingModule,
+    TabViewModule,
+    DividerModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

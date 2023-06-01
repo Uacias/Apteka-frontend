@@ -19,7 +19,6 @@ export class BestsellersComponent implements OnInit {
       .pipe(
         tap((bestSellers) => {
           this.bestSellers = bestSellers;
-          console.log(this.bestSellers);
         })
       )
       .subscribe();

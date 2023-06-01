@@ -27,8 +27,6 @@ export class ProductsService {
       return this.http.get<IProduct[]>(`${this.url}getAll`).pipe(
         tap((products) => {
           this.products = products;
-          console.log(this.products);
-
           const bestSellers = products.slice(0, 3);
           this.bestSellersSubject.next(bestSellers);
         })

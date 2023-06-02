@@ -5,7 +5,7 @@ export interface IProduct {
   description: string;
   type: productType;
   ingredients: string;
-  pictureId: string;
+  pictureId: number;
 }
 
 export enum productType {

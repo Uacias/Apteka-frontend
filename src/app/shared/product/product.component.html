@@ -1,0 +1,27 @@
+<p-card [header]="product.name" class="card-bestseller">
+  <div class="image-container">
+    <img
+      [src]="'../../../../assets/img/products/' + product.pictureId + '.jpg'"
+      [alt]="product.name"
+      class="product-image"
+    />
+  </div>
+
+  <p class="m-0">{{ product.price | currency }}</p>
+  <div class="wrapper-amount">
+    <p-button
+      icon="pi pi-minus"
+      styleClass="p-button-rounded"
+      (click)="decrementQuantity()"
+    ></p-button>
+    <span class="amount">{{ quantity }}</span>
+    <p-button
+      icon="pi pi-plus"
+      styleClass="p-button-rounded"
+      (click)="incrementQuantity()"
+    ></p-button>
+  </div>
+  <div class="wrapper-button">
+    <p-button label="Add"></p-button>
+  </div>
+</p-card>

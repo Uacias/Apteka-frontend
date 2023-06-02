@@ -26,8 +26,6 @@ export class NavComponent {
           { label: 'Beauty', routerLink: 'store/beauty' },
           { label: 'Supplements', routerLink: 'store/supplements' },
           { label: 'Vitamins', routerLink: 'store/vitamins' },
-          { label: 'Diet & Nutrition', routerLink: 'store/diet-and-nutrition' },
-          { label: 'Tea & Coffee', routerLink: 'store/tea-and-coffee' },
         ],
       },
 

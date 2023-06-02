@@ -12,6 +12,11 @@ export class ProductsService {
   private bestSellersSubject: BehaviorSubject<IProduct[]> = new BehaviorSubject<
     IProduct[]
   >([]);
+  private healthWellnessProducts: IProduct[] = [];
+  private vitaminsProducts: IProduct[] = [];
+  private supplementsProducts: IProduct[] = [];
+  private beautyProducts: IProduct[] = [];
+  private pharmacyProducts: IProduct[] = [];
 
   constructor(private readonly http: HttpClient) {}
 
@@ -49,7 +54,70 @@ export class ProductsService {
     return this.http.delete<IProduct>(`${this.url}${id}`);
   }
 
-  getProductByType(type: productType): Observable<IProduct> {
-    return this.http.get<IProduct>(`${this.url}typProduktu/${type}`);
+  getProductByType(type: productType): Observable<IProduct[]> {
+    switch (type) {
+      case productType.HEALTHWELLNESS:
+        if (this.healthWellnessProducts.length > 0) {
+          return of(this.healthWellnessProducts);
+        } else {
+          return this.http
+            .get<IProduct[]>(`${this.url}typProduktu/${type}`)
+            .pipe(
+              tap((products) => {
+                this.healthWellnessProducts = products;
+              })
+            );
+        }
+      case productType.VITAMINS:
+        if (this.vitaminsProducts.length > 0) {
+          return of(this.vitaminsProducts);
+        } else {
+          return this.http
+            .get<IProduct[]>(`${this.url}typProduktu/${type}`)
+            .pipe(
+              tap((products) => {
+                this.vitaminsProducts = products;
+              })
+            );
+        }
+      case productType.SUPPLEMENTS:
+        if (this.supplementsProducts.length > 0) {
+          return of(this.supplementsProducts);
+        } else {
+          return this.http
+            .get<IProduct[]>(`${this.url}typProduktu/${type}`)
+            .pipe(
+              tap((products) => {
+                this.supplementsProducts = products;
+              })
+            );
+        }
+      case productType.BEAUTY:
+        if (this.beautyProducts.length > 0) {
+          return of(this.beautyProducts);
+        } else {
+          return this.http
+            .get<IProduct[]>(`${this.url}typProduktu/${type}`)
+            .pipe(
+              tap((products) => {
+                this.beautyProducts = products;
+              })
+            );
+        }
+      case productType.PHARMACY:
+        if (this.pharmacyProducts.length > 0) {
+          return of(this.pharmacyProducts);
+        } else {
+          return this.http
+            .get<IProduct[]>(`${this.url}typProduktu/${type}`)
+            .pipe(
+              tap((products) => {
+                this.pharmacyProducts = products;
+              })
+            );
+        }
+      default:
+        return of([]);
+    }
   }
 }

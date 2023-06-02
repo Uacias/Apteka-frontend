@@ -31,6 +31,10 @@ import { ProductComponent } from './shared/product/product.component';
 import { TabViewModule } from 'primeng/tabview';
 import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
+import { BasketComponent } from './shared/basket/basket.component';
+import { OrderListModule } from 'primeng/orderlist';
+import { FormsModule } from '@angular/forms';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 @NgModule({
   declarations: [
@@ -52,6 +56,7 @@ import { TableModule } from 'primeng/table';
     BestsellersComponent,
     UserOpinionsComponent,
     ProductComponent,
+    BasketComponent,
   ],
   imports: [
     HttpClientModule,
@@ -69,6 +74,9 @@ import { TableModule } from 'primeng/table';
     TabViewModule,
     DividerModule,
     TableModule,
+    OrderListModule,
+    FormsModule,
+    InputNumberModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

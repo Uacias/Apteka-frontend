@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IProduct, productType } from './product';
 import { BehaviorSubject, Observable, map, of, tap } from 'rxjs';
+import { IProductBasket } from './product-basket';
 
 @Injectable({
   providedIn: 'root',
@@ -17,8 +18,38 @@ export class ProductsService {
   private supplementsProducts: IProduct[] = [];
   private beautyProducts: IProduct[] = [];
   private pharmacyProducts: IProduct[] = [];
+  private basketProducts: IProductBasket[] = [];
 
   constructor(private readonly http: HttpClient) {}
+
+  addToBasket(product: IProductBasket) {
+    const existingProduct = this.basketProducts.find(
+      (p) => p.id === product.id
+    );
+
+    if (existingProduct) {
+      existingProduct.quantity += product.quantity;
+      existingProduct.totalPrice += product.totalPrice;
+    } else {
+      this.basketProducts.push(product);
+    }
+  }
+
+  removeFromBasket(product: IProductBasket) {
+    const index = this.basketProducts.findIndex((p) => p.id === product.id);
+    this.basketProducts.splice(index, 1);
+  }
+
+  getBasketProducts(): IProductBasket[] {
+    return this.basketProducts;
+  }
+
+  getBasketTotalPrice(): number {
+    return this.basketProducts.reduce(
+      (totalPrice, product) => totalPrice + product.totalPrice,
+      0
+    );
+  }
 
   getAllProducts(): Observable<IProduct[]> {
     if (this.products.length > 0) {

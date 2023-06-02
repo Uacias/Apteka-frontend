@@ -8,6 +8,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavComponent {
   items!: MenuItem[];
+  isBasketOpen: boolean = false;
 
   ngOnInit() {
     this.items = [
@@ -32,7 +33,6 @@ export class NavComponent {
       {
         label: 'About Us',
         items: [
-
           { label: 'Contact Us', routerLink: 'about/contact' },
           { label: 'Our story', routerLink: 'about/our-story' },
         ],

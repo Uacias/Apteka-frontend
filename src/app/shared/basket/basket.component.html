@@ -1,0 +1,48 @@
+<div class="overlay">
+  <div class="basket">
+    <div class="wrapper-items">
+      <h2>Your Basket</h2>
+      <p-orderList
+        [value]="basketProducts"
+        [listStyle]="{ 'max-height': '350px' }"
+      >
+        <ng-template let-product pTemplate="item" let-i="index">
+          <div class="flex align-items-center p-2 w-full flex-wrap">
+            <div class="flex-1">
+              <h5 class="mb-2">{{ product.name }}</h5>
+              <div class="quantity-wrapper">
+                <span class="label">Amount</span>
+                <div class="quantity-input">
+                  <p-inputNumber
+                    [(ngModel)]="product.quantity"
+                    [showButtons]="true"
+                    inputId="stacked"
+                    [min]="1"
+                    [max]="99"
+                    (ngModelChange)="updateQuantity(product, i)"
+                  ></p-inputNumber>
+                </div>
+              </div>
+              <h6 class="mb-2">
+                Subtotal {{ calculateSubtotal(product) | currency }}
+              </h6>
+            </div>
+            <div>
+              <i
+                class="pi pi-trash"
+                style="color: rgb(226, 127, 127)"
+                (click)="removeProductFromBasket(product)"
+              ></i>
+            </div>
+          </div>
+        </ng-template>
+      </p-orderList>
+      <div class="wrapper-checkout">
+        <h2 *ngIf="basketProducts.length">
+          Total: {{ calculateTotalPrice() | currency }}
+        </h2>
+        <p-button *ngIf="basketProducts.length">Checkout</p-button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,8 @@
-<div class="wrapper-bestsellers" *ngIf="this.bestSellers.length">
-  <h3 class="section-title">Bestsellers</h3>
-  <div class="wrapper-cards">
-    <div *ngFor="let product of this.bestSellers">
+<div>
+  <h2 class="header">Bestsellers</h2>
+  <div class="product-grid">
+    <ng-container *ngFor="let product of bestSellers">
       <app-product [product]="product"></app-product>
-    </div>
+    </ng-container>
   </div>
 </div>

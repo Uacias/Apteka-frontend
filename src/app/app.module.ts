@@ -13,14 +13,10 @@ import { AvatarModule } from 'primeng/avatar';
 import { HomeComponent } from './pages/home/home.component';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
-
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/about/subpages/contact/contact.component';
-import { LocationComponent } from './pages/about/subpages/location/location.component';
 import { OurStoryComponent } from './pages/about/subpages/our-story/our-story.component';
-import { TermsAndConditionsComponent } from './pages/about/subpages/terms-and-conditions/terms-and-conditions.component';
-import { PrivacyPolicyComponent } from './pages/about/subpages/privacy-policy/privacy-policy.component';
 import { StoreComponent } from './pages/store/store.component';
 import { PharmacyComponent } from './pages/store/subpages/pharmacy/pharmacy.component';
 import { HealthAndWellnessComponent } from './pages/store/subpages/health-and-wellness/health-and-wellness.component';
@@ -32,6 +28,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BestsellersComponent } from './pages/home/bestsellers/bestsellers.component';
 import { UserOpinionsComponent } from './pages/home/user-opinions/user-opinions.component';
 import { ProductComponent } from './shared/product/product.component';
+import { TabViewModule } from 'primeng/tabview';
+import { DividerModule } from 'primeng/divider';
+import { TableModule } from 'primeng/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,10 +40,7 @@ import { ProductComponent } from './shared/product/product.component';
     NotFoundComponent,
     AboutComponent,
     ContactComponent,
-    LocationComponent,
     OurStoryComponent,
-    TermsAndConditionsComponent,
-    PrivacyPolicyComponent,
     StoreComponent,
     PharmacyComponent,
     HealthAndWellnessComponent,
@@ -69,6 +66,9 @@ import { ProductComponent } from './shared/product/product.component';
     CardModule,
     AvatarModule,
     RatingModule,
+    TabViewModule,
+    DividerModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

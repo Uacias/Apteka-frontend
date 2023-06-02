@@ -4,10 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/about/subpages/contact/contact.component';
-import { LocationComponent } from './pages/about/subpages/location/location.component';
-import { TermsAndConditionsComponent } from './pages/about/subpages/terms-and-conditions/terms-and-conditions.component';
+
 import { OurStoryComponent } from './pages/about/subpages/our-story/our-story.component';
-import { PrivacyPolicyComponent } from './pages/about/subpages/privacy-policy/privacy-policy.component';
 
 import { VitaminsComponent } from './pages/store/subpages/vitamins/vitamins.component';
 import { PharmacyComponent } from './pages/store/subpages/pharmacy/pharmacy.component';
@@ -25,11 +23,8 @@ const routes: Routes = [
     canActivate: [RedirectedPagesGuard],
     component: AboutComponent,
     children: [
-      { path: 'location', component: LocationComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'our-story', component: OurStoryComponent },
-      { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
-      { path: 'privacy-policy', component: PrivacyPolicyComponent },
     ],
   },
   {

@@ -1,1 +1,59 @@
-<p>contact works!</p>
+<p-tabView styleClass="tabview-custom">
+  <p-tabPanel>
+    <ng-template pTemplate="header">
+      <span>Location&Hours</span>
+    </ng-template>
+    <div style="margin: 0 auto; max-width: 70rem;">
+      <p-card class="card-bestseller">
+      <p-table [value]="openingHours" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Apteka</th>
+            <th>Lokalizacja</th>
+            <th>Poniedziałek</th>
+            <th>Wtorek</th>
+            <th>Środa</th>
+            <th>Czwartek</th>
+            <th>Piątek</th>
+            <th>Sobota</th>
+            <th>Niedziela</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-openingHour>
+          <tr>
+            <td>{{ openingHour.pharmacyName }}</td>
+            <td>{{ openingHour.location }}</td>
+            <td>{{ openingHour.monday }}</td>
+            <td>{{ openingHour.tuesday }}</td>
+            <td>{{ openingHour.wednesday }}</td>
+            <td>{{ openingHour.thursday }}</td>
+            <td>{{ openingHour.friday }}</td>
+            <td>{{ openingHour.saturday }}</td>
+            <td>{{ openingHour.sunday }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+      </p-card>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Header II">
+    <ng-template pTemplate="header">
+      <span>Privacy&Policy</span>
+    </ng-template>
+    <p-card class="card-bestseller">
+    <p>
+      At PharmaXpress, we take your privacy seriously. This Privacy Policy outlines how we collect, use, and protect your personal information when you interact with our website. We adhere to strict privacy practices and ensure that any information you provide is handled securely and confidentially. By using our services, you consent to the collection and use of your personal information as described in this Privacy Policy.
+    </p>
+      </p-card>
+  </p-tabPanel>
+  <p-tabPanel header="Header III">
+    <ng-template pTemplate="header">
+      <span>Terms&Conditions</span>
+    </ng-template>
+    <p-card class="card-bestseller">
+    <p>
+      Please read these Terms and Conditions carefully before using our website. By accessing or using our services, you agree to be bound by these Terms and Conditions. These terms govern your use of the PharmaXpress website and any services provided by us. It is important to review and understand these terms as they outline your rights and obligations when using our platform. If you do not agree with any part of these Terms and Conditions, please refrain from using our website.
+    </p>
+    </p-card>
+  </p-tabPanel>
+</p-tabView>

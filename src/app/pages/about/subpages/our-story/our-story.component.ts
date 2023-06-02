@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./our-story.component.scss']
 })
 export class OurStoryComponent {
+  public locationPath: string ='../../../assets/img/contact-us/location&hours.jpg'
 
 }

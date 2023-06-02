@@ -1,0 +1,17 @@
+//.p-orderlist-controls {
+//  display: none;
+//}
+
+//.p-orderlist-controls {
+//  display: none !important;
+//}
+
+//.p-orderlist .p-orderlist-controls {
+//  display: none !important;
+//}
+
+:host ::ng-deep {
+  .p-orderlist-controls{
+    display: none;
+  }
+}

@@ -1,6 +1,10 @@
 <p-menubar [model]="items" styleClass="menubar">
   <ng-template pTemplate="end">
     <input type="text" pInputText placeholder="Search" />
-    <p-button icon="pi pi-shopping-cart" class="button-basket"></p-button>
+    <p-button icon="pi pi-shopping-cart" class="button-basket" (onClick)="toggleBasket()"></p-button>
   </ng-template>
 </p-menubar>
+
+<ng-container *ngIf="showBasket">
+  <app-basket></app-basket>
+</ng-container>

@@ -32,6 +32,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BestsellersComponent } from './pages/home/bestsellers/bestsellers.component';
 import { UserOpinionsComponent } from './pages/home/user-opinions/user-opinions.component';
 import { ProductComponent } from './shared/product/product.component';
+import {BasketComponent} from './shared/basket/basket.component';
+import {OrderListModule} from 'primeng/orderlist';
+import {TagModule} from 'primeng/tag';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +59,7 @@ import { ProductComponent } from './shared/product/product.component';
     BestsellersComponent,
     UserOpinionsComponent,
     ProductComponent,
+    BasketComponent,
   ],
   imports: [
     HttpClientModule,
@@ -69,6 +74,8 @@ import { ProductComponent } from './shared/product/product.component';
     CardModule,
     AvatarModule,
     RatingModule,
+    OrderListModule,
+    TagModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

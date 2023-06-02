@@ -8,6 +8,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavComponent {
   items!: MenuItem[];
+  showBasket: boolean = false;
 
   ngOnInit() {
     this.items = [
@@ -43,5 +44,10 @@ export class NavComponent {
         ],
       },
     ];
+  }
+
+  toggleBasket() {
+    console.log('click')
+    this.showBasket = !this.showBasket;
   }
 }

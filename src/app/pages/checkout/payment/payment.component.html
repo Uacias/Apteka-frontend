@@ -1,1 +1,28 @@
-<p>payment works!</p>
+<form
+  class="form-shipping"
+  [formGroup]="shippingForm"
+  (ngSubmit)="submitForm()"
+>
+  <input
+    type="text"
+    pInputText
+    placeholder="First Name"
+    formControlName="firstName"
+  />
+  <input
+    type="text"
+    pInputText
+    placeholder="Last Name"
+    formControlName="lastName"
+  />
+  <input
+    type="number"
+    pInputText
+    placeholder="Card Number"
+    formControlName="cardNumber"
+  />
+  <input type="number" pInputText placeholder="CVV" formControlName="CVV" />
+  <p-calendar type="text" formControlName="expireDate" [showIcon]="true" />
+
+  <p-button (click)="submitForm()">Submit</p-button>
+</form>

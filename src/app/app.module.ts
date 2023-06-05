@@ -38,9 +38,9 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { StepsModule } from 'primeng/steps';
 import { ShippingComponent } from './pages/checkout/shipping/shipping.component';
-
 import { CheckoutService } from './pages/checkout/checkout.service';
 import { PaymentComponent } from './pages/checkout/payment/payment.component';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -88,8 +88,9 @@ import { PaymentComponent } from './pages/checkout/payment/payment.component';
     ReactiveFormsModule,
     InputNumberModule,
     StepsModule,
+    CalendarModule,
   ],
-  providers: [CheckoutService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

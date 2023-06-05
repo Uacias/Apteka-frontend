@@ -1,4 +1,3 @@
-import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../product/products.service';
 import { IProductBasket } from '../product/product-basket';
@@ -49,7 +48,7 @@ export class BasketComponent implements OnInit {
   }
 
   displayCheckoutForm() {
-    this.router.navigate(['checkout']);
     this.toggleBasket();
+    this.router.navigate(['checkout']);
   }
 }

@@ -19,13 +19,13 @@ export class ProductsService {
   private beautyProducts: IProduct[] = [];
   private pharmacyProducts: IProduct[] = [];
   private basketProducts: IProductBasket[] = [];
-  isBasketOpen: boolean = false;
+  isBasketOpen: Observable<boolean> = of(false);
 
   constructor(private readonly http: HttpClient) {}
 
-  toggleBasket(): boolean {
-    this.isBasketOpen = !this.isBasketOpen;
-    return this.isBasketOpen;
+  toggleBasket(): void {
+    this.isBasketOpen = this.isBasketOpen.pipe(map((isOpen) => !isOpen));
+    console.log(this.isBasketOpen);
   }
 
   addToBasket(product: IProductBasket) {

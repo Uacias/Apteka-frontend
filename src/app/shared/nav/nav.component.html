@@ -9,4 +9,4 @@
   </ng-template>
 </p-menubar>
 
-<app-basket *ngIf="basketVisible"></app-basket>
+<app-basket *ngIf="productService.isBasketOpen | async"></app-basket>

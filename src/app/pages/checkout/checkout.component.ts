@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { CheckoutService } from './checkout.service';
+import { ProductsService } from 'src/app/shared/product/products.service';
 
 @Component({
   selector: 'app-checkout',

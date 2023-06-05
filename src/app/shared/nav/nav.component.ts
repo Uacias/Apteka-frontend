@@ -9,11 +9,11 @@ import { ProductsService } from '../product/products.service';
 })
 export class NavComponent {
   items!: MenuItem[];
-  basketVisible = false;
-  constructor(private readonly productService: ProductsService) {}
+
+  constructor(public readonly productService: ProductsService) {}
 
   togglebasket(): void {
-    this.basketVisible = this.productService.toggleBasket();
+    this.productService.toggleBasket();
   }
   ngOnInit() {
     this.items = [

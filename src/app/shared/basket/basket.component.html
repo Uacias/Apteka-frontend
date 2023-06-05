@@ -41,7 +41,9 @@
         <h2 *ngIf="basketProducts.length">
           Total: {{ calculateTotalPrice() | currency }}
         </h2>
-        <p-button *ngIf="basketProducts.length">Checkout</p-button>
+        <p-button *ngIf="basketProducts.length" (click)="displayCheckoutForm()"
+          >Checkout</p-button
+        >
       </div>
     </div>
   </div>

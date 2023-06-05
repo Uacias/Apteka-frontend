@@ -4,9 +4,9 @@
     <p-button
       icon="pi pi-shopping-cart"
       class="button-basket"
-      (click)="isBasketOpen = !isBasketOpen"
+      (click)="togglebasket()"
     ></p-button>
   </ng-template>
 </p-menubar>
 
-<app-basket *ngIf="isBasketOpen"></app-basket>
+<app-basket *ngIf="basketVisible"></app-basket>

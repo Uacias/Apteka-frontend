@@ -1,0 +1,45 @@
+<form
+  class="form-shipping"
+  [formGroup]="shippingForm"
+  (ngSubmit)="submitForm()"
+>
+  <input
+    type="text"
+    pInputText
+    placeholder="First Name"
+    formControlName="firstName"
+  />
+  <input
+    type="text"
+    pInputText
+    placeholder="Last Name"
+    formControlName="lastName"
+  />
+  <input type="email" pInputText placeholder="Email" formControlName="email" />
+  <input
+    type="number"
+    pInputText
+    placeholder="Phone Number"
+    formControlName="phoneNumber"
+  />
+  <input
+    type="text"
+    pInputText
+    placeholder="Street Address"
+    formControlName="streetAddress"
+  />
+  <input type="text" pInputText placeholder="City" formControlName="city" />
+  <input
+    type="number"
+    pInputText
+    placeholder="Postal Code"
+    formControlName="postalCode"
+  />
+  <input
+    type="text"
+    pInputText
+    placeholder="Country"
+    formControlName="country"
+  />
+  <p-button (click)="submitForm()">Submit</p-button>
+</form>

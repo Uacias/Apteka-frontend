@@ -4,9 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/about/subpages/contact/contact.component';
-
 import { OurStoryComponent } from './pages/about/subpages/our-story/our-story.component';
-
 import { VitaminsComponent } from './pages/store/subpages/vitamins/vitamins.component';
 import { PharmacyComponent } from './pages/store/subpages/pharmacy/pharmacy.component';
 import { HealthAndWellnessComponent } from './pages/store/subpages/health-and-wellness/health-and-wellness.component';
@@ -14,6 +12,7 @@ import { BeautyComponent } from './pages/store/subpages/beauty/beauty.component'
 import { SupplementsComponent } from './pages/store/subpages/supplements/supplements.component';
 import { StoreComponent } from './pages/store/store.component';
 import { RedirectedPagesGuard } from './shared/guards/redirected-pages.guard';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -39,6 +38,7 @@ const routes: Routes = [
       { path: 'vitamins', component: VitaminsComponent },
     ],
   },
+  {path: 'checkout', component: CheckoutComponent},
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },

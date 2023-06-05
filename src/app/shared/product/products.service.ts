@@ -19,8 +19,14 @@ export class ProductsService {
   private beautyProducts: IProduct[] = [];
   private pharmacyProducts: IProduct[] = [];
   private basketProducts: IProductBasket[] = [];
+  isBasketOpen: boolean = false;
 
   constructor(private readonly http: HttpClient) {}
+
+  toggleBasket(): boolean {
+    this.isBasketOpen = !this.isBasketOpen;
+    return this.isBasketOpen;
+  }
 
   addToBasket(product: IProductBasket) {
     const existingProduct = this.basketProducts.find(

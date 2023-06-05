@@ -13,6 +13,7 @@ import { SupplementsComponent } from './pages/store/subpages/supplements/supplem
 import { StoreComponent } from './pages/store/store.component';
 import { RedirectedPagesGuard } from './shared/guards/redirected-pages.guard';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { BasketGuard } from './shared/guards/basket.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -38,7 +39,11 @@ const routes: Routes = [
       { path: 'vitamins', component: VitaminsComponent },
     ],
   },
-  {path: 'checkout', component: CheckoutComponent},
+  {
+    path: 'checkout',
+    component: CheckoutComponent,
+    canActivate: [BasketGuard],
+  },
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },

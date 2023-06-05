@@ -23,6 +23,10 @@ export class ProductsService {
 
   constructor(private readonly http: HttpClient) {}
 
+  isBasketEmpty(): boolean {
+    return this.basketProducts.length === 0;
+  }
+
   toggleBasket(): void {
     this.isBasketOpen = this.isBasketOpen.pipe(map((isOpen) => !isOpen));
     console.log(this.isBasketOpen);

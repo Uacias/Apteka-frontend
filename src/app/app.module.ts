@@ -40,6 +40,7 @@ import { StepsModule } from 'primeng/steps';
 import { ShippingComponent } from './pages/checkout/shipping/shipping.component';
 
 import { CheckoutService } from './pages/checkout/checkout.service';
+import { PaymentComponent } from './pages/checkout/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { CheckoutService } from './pages/checkout/checkout.service';
     BasketComponent,
     CheckoutComponent,
     ShippingComponent,
+    PaymentComponent,
   ],
   imports: [
     HttpClientModule,

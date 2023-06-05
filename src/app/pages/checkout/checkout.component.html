@@ -12,7 +12,10 @@
     </div>
 
     <div class="wrapper-form">
-      <app-shipping></app-shipping>
+      <ng-container [ngSwitch]="activeStep">
+        <app-shipping *ngSwitchCase="0"></app-shipping>
+        <app-payment *ngSwitchCase="1"></app-payment>
+      </ng-container>
     </div>
   </div>
 </div>

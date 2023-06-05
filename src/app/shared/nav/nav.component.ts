@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { ProductsService } from '../product/products.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,8 +9,12 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavComponent {
   items!: MenuItem[];
-  isBasketOpen: boolean = false;
 
+  constructor(public readonly productService: ProductsService) {}
+
+  togglebasket(): void {
+    this.productService.toggleBasket();
+  }
   ngOnInit() {
     this.items = [
       {

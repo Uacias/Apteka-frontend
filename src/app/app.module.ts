@@ -33,8 +33,14 @@ import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
 import { BasketComponent } from './shared/basket/basket.component';
 import { OrderListModule } from 'primeng/orderlist';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { StepsModule } from 'primeng/steps';
+import { ShippingComponent } from './pages/checkout/shipping/shipping.component';
+import { CheckoutService } from './pages/checkout/checkout.service';
+import { PaymentComponent } from './pages/checkout/payment/payment.component';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -57,6 +63,9 @@ import { InputNumberModule } from 'primeng/inputnumber';
     UserOpinionsComponent,
     ProductComponent,
     BasketComponent,
+    CheckoutComponent,
+    ShippingComponent,
+    PaymentComponent,
   ],
   imports: [
     HttpClientModule,
@@ -76,7 +85,10 @@ import { InputNumberModule } from 'primeng/inputnumber';
     TableModule,
     OrderListModule,
     FormsModule,
+    ReactiveFormsModule,
     InputNumberModule,
+    StepsModule,
+    CalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

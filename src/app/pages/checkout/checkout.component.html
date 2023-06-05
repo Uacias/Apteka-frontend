@@ -1,0 +1,21 @@
+<div class="wrapper-section">
+  <h1 class="section-title">Checkout</h1>
+
+  <div class="section-content">
+    <div class="basket-state"></div>
+    <div class="wrapper-steps">
+      <p-steps
+        [model]="items"
+        [readonly]="true"
+        [(activeIndex)]="activeStep"
+      ></p-steps>
+    </div>
+
+    <div class="wrapper-form">
+      <ng-container [ngSwitch]="activeStep">
+        <app-shipping *ngSwitchCase="0"></app-shipping>
+        <app-payment *ngSwitchCase="1"></app-payment>
+      </ng-container>
+    </div>
+  </div>
+</div>

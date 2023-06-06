@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CheckoutService } from '../checkout.service';
+import { ProductsService } from 'src/app/shared/product/products.service';
 
 @Component({
   selector: 'app-payment',
@@ -8,11 +9,12 @@ import { CheckoutService } from '../checkout.service';
   styleUrls: ['./payment.component.scss'],
 })
 export class PaymentComponent {
-  shippingForm!: FormGroup;
+  paymentForm!: FormGroup;
 
   constructor(
     private readonly fb: FormBuilder,
-    private readonly checkoutService: CheckoutService
+    private readonly router: Router,
+    private readonly productService: ProductsService
   ) {}
 
   ngOnInit(): void {
@@ -20,13 +22,15 @@ export class PaymentComponent {
   }
 
   submitForm(): void {
-    if (this.shippingForm.valid) {
-      console.log(this.shippingForm.value);
+    if (this.paymentForm.valid) {
+      console.log(this.paymentForm.value);
+      this.router.navigate(['home']);
+      this.productService.clearBasket();
     }
   }
 
   setupForm(): void {
-    this.shippingForm = this.fb.group({
+    this.paymentForm = this.fb.group({
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       cardNumber: ['', [Validators.required]],

@@ -42,10 +42,13 @@ div {
 
             div {
               &.wrapper-checkout {
-                position: fixed;
-                bottom: 16px;
-                right: 0;
-                transform: translateX(-50%);
+                margin-top: 32px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                position: sticky;
+                bottom: 0;
               }
             }
           }

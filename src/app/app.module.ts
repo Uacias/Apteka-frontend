@@ -38,7 +38,6 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { StepsModule } from 'primeng/steps';
 import { ShippingComponent } from './pages/checkout/shipping/shipping.component';
-import { CheckoutService } from './pages/checkout/checkout.service';
 import { PaymentComponent } from './pages/checkout/payment/payment.component';
 import { CalendarModule } from 'primeng/calendar';
 

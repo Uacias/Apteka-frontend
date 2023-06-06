@@ -27,6 +27,10 @@ export class ProductsService {
     return this.basketProducts.length === 0;
   }
 
+  clearBasket(): void {
+    this.basketProducts = [];
+  }
+
   toggleBasket(): void {
     this.isBasketOpen = this.isBasketOpen.pipe(map((isOpen) => !isOpen));
     console.log(this.isBasketOpen);

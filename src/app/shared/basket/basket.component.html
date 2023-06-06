@@ -38,9 +38,9 @@
         </ng-template>
       </p-orderList>
       <div class="wrapper-checkout">
-        <h2 *ngIf="basketProducts.length">
+        <h3 *ngIf="basketProducts.length">
           Total: {{ calculateTotalPrice() | currency }}
-        </h2>
+        </h3>
         <p-button *ngIf="basketProducts.length" (click)="displayCheckoutForm()"
           >Checkout</p-button
         >

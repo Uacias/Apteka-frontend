@@ -1,7 +1,13 @@
 # AptekaFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+node version 18.12.1
+nvm version: 1.1.9
 
+
+to set dependencies use npm ci
+to deploy on localhost use ng s -o
+
+start on branch develop
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
